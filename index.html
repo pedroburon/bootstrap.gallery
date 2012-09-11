@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Gallery</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        background-color: black;
+      }
+      #wrapper {
+        margin-top: 20px;
+      }
+      #gallery {
+        margin: 0 auto;
+        background-color: white;
+        width: 690px;
+      }
+      #gallery .carousel-inner {
+        height: 440px;
+      }
+      #gallery .item {
+        background-color: lightgray;
+      }
+      #gallery .item img {
+        display: block;
+        margin: auto;
+        height: 440px;
+      }
+      #gallery .thumbnail.active {
+        border-color: #08C;
+      }
+      #gallery .thumbnails {
+        margin: 0;
+      }
+      #gallery .thumbnail img {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="gallery">
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href=""><img src="images/1.jpg?guante-fox-1.jpg" height="440"></a>
+            </div>
+            <div class="item">
+              <img src="images/2.jpg?guante-fox-2.jpg">
+            </div>
+            <div class="item">
+              <iframe width="690" height="440" src="http://www.youtube-nocookie.com/embed/b_8RyYrc97I?rel=0&wmode=transparent" frameborder="0"
+              allowfullscreen></iframe>
+            </div>
+            <div class="item">
+              <img src="images/3.jpg?guante-fox-3.jpg" height="440">
+            </div>
+          </div>
+          <a class="carousel-control left" href="#" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#" data-slide="next">&rsaquo;</a>
+        </div>
+
+        <ul class="thumbnails">
+          <li><a href="#" class="thumbnail active"><img src="images/1th.jpg" alt="" width="30" height="30"></a></li>
+          <li><a href="#" class="thumbnail"><img src="images/2th.jpg" alt="" width="30" height="30"></a></li>
+          <li><a href="#" class="thumbnail"><img src="http://img.youtube.com/vi/b_8RyYrc97I/default.jpg" alt="" width="30" height="30"></a></li>
+          <li><a href="#" class="thumbnail"><img src="images/3th.jpg" alt="" width="30" height="30"></a></li>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap.gallery.js"></script>
+    <script type="text/javascript">
+    jQuery(function($) {
+      // options same as bootstrap.carousel
+      $('#gallery').gallery({interval: false, })
+    });
+    </script>
+  </body>
+</html>
